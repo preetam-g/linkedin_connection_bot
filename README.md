@@ -3,5 +3,5 @@ For everyone who wants to expand their network in linkedin but is too busy to ma
 
 ## Specifications and Pre-requisites
 * This code is designed to work on windows computer systems.
-* Make sure you have logged in LinkedIn using your laptop *_chrome_* browser.  
+* Make sure you have logged in LinkedIn using your laptop *chrome* browser.  
 * 
