@@ -3,5 +3,5 @@ For everyone who wants to expand their network in linkedin but is too busy to ma
 
 # Requirements
 *This code is designed to work on windows computer systems.
-+You must set you linkedIn in dark mode. 
--
+*You must set you linkedIn in dark mode. 
+*
