@@ -8,4 +8,4 @@ For everyone who wants to expand their network in linkedin but is too busy to ma
 * Prepare an excel sheet with a list of profile links of everyone you want to connect placed in a column.
 
 ## Working
-This is a complete python based program which uses the PyAutoGUI module of python. This module is used to control your mouse and keyboard commands. One of the applications of PyAutoGUI is to automate actions of mouse and keyboard based on the content present on the screen which is being done in here. If you want to know more about PyAutoGUI, you can visit [this site](https://pyautogui.readthedocs.io/en/latest/).
+This is a complete python based program which uses the PyAutoGUI module of python. This module is used to control your mouse and keyboard commands. One of the main applications of PyAutoGUI is to automate actions of mouse and keyboard based on the content present on the screen which is being done in here. If you want to know more about PyAutoGUI, you can visit [this site](https://pyautogui.readthedocs.io/en/latest/).
