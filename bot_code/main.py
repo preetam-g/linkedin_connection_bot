@@ -33,7 +33,7 @@ pag.countdown(3)
 # opening listing excel sheet
 pag.hotkey("ctrl", 't')
 pag.countdown(3)
-pag.typewrite(images.listing_link, interval=0.06)
+pag.typewrite(images.excel_sheet_link, interval=0.06)
 pag.countdown(1)
 pag.press("enter")
 pag.countdown(4)
@@ -95,7 +95,7 @@ while count>0:
 
         #typing message
         pag.countdown(1)
-        pag.typewrite(images.marky_note, interval = 0.08)
+        pag.typewrite(images.connection_note, interval = 0.08)
         
         #sending message
         send_button = pag.locateCenterOnScreen(images.send, confidence = 0.9)
