@@ -7,12 +7,20 @@ pag.FAILSAFE = True
 cell_num = str(input("cell num: "))
 count = int(input("how many cells: "))
 
+note_present = str(input("do you want to send request along with a note(y/n): "))
+
+while (note_present not in ['y', 'n']):
+    note_present = str(input("i did not understand, could you responsd again with (y/n): "))
+
+if (note_present == 'y'): note_present = True
+else: note_present = False
+
 # opening chrome profiles
 pag.hotkey("win", 'r',interval=0.25)
 pag.countdown(1)
 pag.hotkey("ctrl", 'a', "backspace")
 pag.countdown(1)
-pag.typewrite("chrome",interval=0.02)
+pag.typewrite("chrome",interval=0.05)
 pag.countdown(1)
 pag.hotkey("enter")
 pag.countdown(3)
@@ -25,13 +33,13 @@ pag.countdown(3)
 # opening listing excel sheet
 pag.hotkey("ctrl", 't')
 pag.countdown(3)
-pag.typewrite(images.listing_link, interval=0.08)
+pag.typewrite(images.listing_link, interval=0.06)
 pag.countdown(1)
 pag.press("enter")
 pag.countdown(4)
 
 # selecting cell num
-pag.moveTo(x = (930,160), duration = 0.85)
+pag.moveTo(x = (930,160), duration = 0.85) # need to change the hard coded cordinate (maybe remove this and next line)
 pag.click()
 pag.keyDown("ctrl")
 pag.press('j')
@@ -77,21 +85,22 @@ while count>0:
     #going to message box
     pag.countdown(2)
 
+    if (note_present):
+        add_note_button = None
+        while not add_note_button:
+            pag.countdown(1)
+            add_note_button = pag.locateCenterOnScreen(images.add_note, confidence = 0.8)
+            pag.moveTo(add_note_button, duration = 0.57)
+            pag.click()
 
-    # add_note_button = None
-    # while not add_note_button:
-    #     pag.countdown(1)
-    #     add_note_button = pag.locateCenterOnScreen(images.add_note, confidence = 0.8)
-    #     pag.moveTo(add_note_button, duration = 0.57)
-    #     pag.click()
+        #typing message
+        pag.countdown(1)
+        pag.typewrite(images.marky_note, interval = 0.08)
+        
+        #sending message
+        send_button = pag.locateCenterOnScreen(images.send, confidence = 0.9)
 
-    # #typing message
-    # pag.countdown(1)
-    # pag.typewrite(images.marky_note, interval = 0.08)
-    
-    # #sending message
-    # send_button = pag.locateCenterOnScreen(images.send, confidence = 0.9)
-    send_button = pag.locateCenterOnScreen(images.without_note, confidence = 0.9)
+    else: send_button = pag.locateCenterOnScreen(images.without_note, confidence = 0.9)
 
     pag.moveTo(send_button, duration = 0.5)
     pag.click()
