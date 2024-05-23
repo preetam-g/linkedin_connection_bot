@@ -15,5 +15,5 @@ You can see the folder labeled "alpha_testing" to visualize and understand the w
 ### 2.1: Google sheet
 * Create a Google sheet and add all the links to LinkedIn profiles in one column. Make sure that there are no empty cells between two links in that column. Here is an example image.
 
-![image](https://github.com/preetam-g/linkedin_connection_bot/assets/118665778/b3e1cdf5-0756-47ae-9335-4a6d2ea239a2){align = "center"}
+![image](https://github.com/preetam-g/linkedin_connection_bot/assets/118665778/b3e1cdf5-0756-47ae-9335-4a6d2ea239a2){ width="800" height="600" style="display: block; margin: 0 auto" }
 
