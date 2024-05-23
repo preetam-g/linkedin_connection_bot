@@ -1,4 +1,4 @@
-techniche_prof = "yuvaan_prof.jpg"
+profile_img = "yuvaan_prof.jpg"
 
 connect = "connect.jpg"
 
@@ -18,3 +18,9 @@ I am Marketing lead of rover team of Robotics Club IITG.We are participating in 
 send = "send.jpg"
 
 without_note = "no_note.jpg"
+
+# to open default chrome profile from cmd use the below line
+# start chrome --profile-directory=Default 
+
+# to open a particular website, add the link of the site separated with spaces.
+# to open in guest mode, write "guest" instead of "Default".

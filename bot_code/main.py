@@ -3,8 +3,7 @@ import images
 
 pag.FAILSAFE = True
 
-
-cell_num = str(input("cell num: "))
+cell_num = str(input("starting cell num (e.g. d4): "))
 count = int(input("how many cells: "))
 
 note_present = str(input("do you want to send request along with a note(y/n): "))
@@ -25,9 +24,9 @@ pag.countdown(1)
 pag.hotkey("enter")
 pag.countdown(3)
 
-# selecting techniche profile
-techniche_button = pag.locateCenterOnScreen(images.techniche_prof, confidence = 0.8) 
-pag.click(techniche_button, duration=1.28, tween = pag.easeOutQuad)
+# selecting desired profile
+profile_button = pag.locateCenterOnScreen(images.profile_img, confidence = 0.8) 
+pag.click(profile_button, duration=1.28, tween = pag.easeOutQuad)
 pag.countdown(3)
 
 # opening listing excel sheet
