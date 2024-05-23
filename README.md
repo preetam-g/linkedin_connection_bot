@@ -49,11 +49,13 @@ To add your note, open the "images.py" file and write the note within triple dob
 * Now once you are in the "bot_code" directory, type in the command "python main.py" to start executing the program.
 
 ### From VSCode terminal
-Follow steps 2 and 3 from the above instructions.
+* Click Ctrl+Shift+` to open new terminal.
+* Follow steps 2 and 3 from the above instructions.
 
-You will be asked for cell number, give the cell number of cell from which you want to start sending requests from the excel sheet.
-Give how many cells this code should run for. 
-You can also choose whether to send the connection note or not. 
+### Inputs
+* You will be asked for cell number, give the cell number of cell from which you want to start sending requests from the excel sheet.
+* Give the number of cells this code should run for.
+* You can also choose whether to send the connection note or not. If you choose "y" make sure to edit the default connection note before starting the program.
 
 ## Remember
 * Try not to make any changes in the "main.py" if you don't completely understand how to code works. If you are well aware of python you can tweek the code according to your needs by refering to the pyautogui documentation. 
