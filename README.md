@@ -13,7 +13,12 @@ You can see the folder labeled "alpha_testing" to visualize and understand the w
 * You should have a dark theme set on the LinkedIn webpage. On how to switch, visit this [site](https://www.linkedin.com/help/linkedin/answer/a524473/switch-between-dark-and-light-mode#:~:text=To%20switch%20to%20either%20dark,under%20Display%2C%20click%20Dark%20mode.).
 
 ### 2.1: Installs
-This program requires python, pyautogui and open-cv.
+This program requires python, pyautogui and open-cv. 
+* Download the latest python version from [here](https://www.python.org/downloads/).
+* You also should have pip installed to install the neccessary pacakages of python. To check if pip is installed in your system use the command "pip --version", this should display a message showing the current version of pip.
+* Run the commands "pip install pyautogui" to install **PyAutoGUI** module.
+* Now run "pip install opencv-python" to install **OpenCV**. This should install the opencv that is compatible with your python version.
+
 
 ### 2.2: Clone
 Once you are done with pre-requisites, clone this github repository into any desired directory of your choice in your system. Make sure that all the files of "bot_code" are in the same directory, else this code will not work. You can delete the "alpha_testing".
