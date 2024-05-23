@@ -3,7 +3,7 @@
 excel_sheet_link = "https://docs.google.com/spreadsheets/d/1M4OiiMCHYxgT4OKQ0wCle2SRtA-W52Wk-zr__1SAsU0/"
 
 connection_note = """Hi, 
-This is a testing connection note. You can write anything here. Ensure that the note satisfies linkedIn character limit."""
+I would like to connect with you."""
 
 open_cmd = f"start chrome --profile-directory=Default {excel_sheet_link}"
 

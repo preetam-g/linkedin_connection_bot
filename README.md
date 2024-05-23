@@ -28,7 +28,13 @@ Once you are done with pre-requisites, clone this github repository into any des
 * Now go to the "images.py" file and you can find a variable named "excel_sheet_link". Update the link with the link of your excel sheet.  To avoid google account conflicts, make sure the sheet is accessable to all google accounts.
 
 ### 2.4: Connection Note
-
+You can also add your personalized connection note. The default note set is 
+<p style="text-align: center;">
+    Hi,
+    I would like to connect with you.
+</p>
+This has been kept optional due to multiple restrictions of LinkedIn on free accounts.
+To add your note, open the "images.py" file and write the note within triple dobule-quotes ("""Like this"""). This ensures that we can add notes consisting of multiple lines in the python file.
 
 ## How to use
 
