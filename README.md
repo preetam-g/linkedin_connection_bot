@@ -13,4 +13,4 @@ You can see the folder labeled "alpha_testing" to visualize and understand the w
 * You should have a dark theme set on the LinkedIn webpage. On how to switch, visit this [site](https://www.linkedin.com/help/linkedin/answer/a524473/switch-between-dark-and-light-mode#:~:text=To%20switch%20to%20either%20dark,under%20Display%2C%20click%20Dark%20mode.).
 
 ### 2.1: Google sheet
-* Create a Google sheet and add all the links to LinkedIn profiles in one column. Make sure that there are no empty cells between two links in that column. Here is an example image.![image](https://github.com/preetam-g/linkedin_connection_bot/assets/118665778/1dd10f9f-d125-42c1-aaea-5a7d6dd0a72b)
+* Create a Google sheet and add all the links to LinkedIn profiles in one column. Make sure that there are no empty cells between two links in that column. Here is an example image.![image](https://github.com/preetam-g/linkedin_connection_bot/assets/118665778/b3e1cdf5-0756-47ae-9335-4a6d2ea239a2)
