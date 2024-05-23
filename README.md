@@ -1,5 +1,5 @@
 ## 0: Introduction
-For everyone who wants to expand their network on LinkedIn but is too busy to send requests to hundreds of people manually, I have designed this Python code using **PyAutoGUI** in Python. This bot can send connection requests to as many people as you want without requiring any external assistance, but you must occassi0nally monitor it. You can go through section 2 to use this in your own device.
+For everyone who wants to expand their network on LinkedIn but is too busy to send requests to hundreds of people manually. This bot can send connection requests to as many people as you want without requiring any external assistance, but you must occassi0nally monitor it. You can go through section 2 to use this in your own device.
 
 ## 1: Working
 This is a complete python based program which uses the PyAutoGUI module of python. This module is used to control your mouse and keyboard commands. One of the applications of PyAutoGUI is to automate actions of mouse and keyboard based on the content present on the screen which is being done in here. If you want to know more about PyAutoGUI, you can visit [this site](https://pyautogui.readthedocs.io/en/latest/).
