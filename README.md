@@ -29,7 +29,7 @@ Once you are done with pre-requisites, clone this github repository into any des
 
 ### 2.4: Connection Note
 You can also add your personalized connection note. The default note set is 
-<p style="text-align: center;">
+<p style="text-align: center">
     Hi, <br />
     I would like to connect with you.
 </p>
