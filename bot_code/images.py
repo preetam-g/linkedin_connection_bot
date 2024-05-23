@@ -1,4 +1,18 @@
-profile_img = "yuvaan_prof.jpg"
+
+# update the given link with your sheet's link
+excel_sheet_link = "https://docs.google.com/spreadsheets/d/1M4OiiMCHYxgT4OKQ0wCle2SRtA-W52Wk-zr__1SAsU0/"
+
+connection_note = """Hi, 
+This is a testing connection note. You can write anything here. Ensure that the note satisfies linkedIn character limit."""
+
+open_cmd = f"start chrome --profile-directory=Default {excel_sheet_link}"
+
+# to open default chrome profile from cmd use the below line
+# start chrome --profile-directory=Default 
+
+# to open a particular website, add the link of the site separated with spaces.
+# to open in guest mode, write "guest" instead of "Default".
+
 
 connect = "connect.jpg"
 
@@ -10,17 +24,8 @@ add_note = "add_note.jpg"
 
 more_connect = "more_connect.jpg"
 
-excel_sheet_link = "https://docs.google.com/spreadsheets/d/18FQaDi137zic0czS9rD_V1SdBiAiTRY4HPOAA1jNv8E/edit#gid=1787345625"
-
-connection_note = """Hi,
-I am Marketing lead of rover team of Robotics Club IITG.We are participating in ISRO Robotics Challenge'24 and looking for partnership opportunities.Could i get your contact number and email?"""
-
 send = "send.jpg"
 
 without_note = "no_note.jpg"
 
-# to open default chrome profile from cmd use the below line
-# start chrome --profile-directory=Default 
-
-# to open a particular website, add the link of the site separated with spaces.
-# to open in guest mode, write "guest" instead of "Default".
+profile_img = "gp_prof.png"
