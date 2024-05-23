@@ -30,7 +30,7 @@ Once you are done with pre-requisites, clone this github repository into any des
 ### 2.4: Connection Note
 You can also add your personalized connection note. The default note set is 
 <p style="text-align: center;">
-    Hi,
+    Hi, \
     I would like to connect with you.
 </p>
 This has been kept optional due to multiple restrictions of LinkedIn on free accounts.
