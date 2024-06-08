@@ -9,8 +9,8 @@ import pyperclip
 import time
 
 
-LINKEDIN_USERNAME = 'preetamgopalasetty@gmail.com'
-LINKEDIN_PASSWORD = 'gp@linkedin'
+LINKEDIN_USERNAME = 'your_username'
+LINKEDIN_PASSWORD = 'your_pwd'
 
 
 def login_to_linkedin(driver, username, password):
