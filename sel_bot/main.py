@@ -5,13 +5,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
-import pyperclip
+import csv
 import time
-
 
 LINKEDIN_USERNAME = "your username"
 LINKEDIN_PASSWORD = "your password"
-
+CSV_NAME = "Enter CSV name (with .csv)"
 
 def login_to_linkedin(driver, username, password):
     """Logs into LinkedIn with the provided credentials."""
@@ -30,7 +29,7 @@ def login_to_linkedin(driver, username, password):
     password_field.send_keys(password)
 
     # time.sleep(1)
-    
+
     password_field.send_keys(Keys.RETURN)
 
     # Wait for the homepage to load
@@ -42,54 +41,78 @@ def login_to_linkedin(driver, username, password):
     # time.sleep(1)
 
 
-def search_and_click_first_result(driver):
-    """Searches for clipboard content and clicks the first result link."""
-
-    # Get clipboard content
-    # clipboard_content = pyperclip.paste()
-    # clipboard_content = "https://www.linkedin.com/in/snehal-damare/"
-    clipboard_content = "https://www.linkedin.com/in/himadri-mondal-iitkgp/"
-
-    # Enter the clipboard content into the search field
-    driver.get(clipboard_content)
-    # driver.maximize_window()
-    time.sleep(6)
-    # btn = driver.find_element("tag_name","Button")
-    #
-    # driver.execute_script("arguments[0].click();",btn)
-    # WebDriverWait(driver, 40).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="ember91"]'))).click()
-    # print("Button Clicked Successfully")
-
+def Iterate_CSV(driver):
     try:
 
-        # # Wait for the Connect button to be present
-        # connect_now_button = driver.find_element(By.XPATH, "//button[contains(@aria-label, 'to connect') or contains(@class, 'pvs-profile-actions__action)]")
-        # if (connect_now_button):
-        #     WebDriverWait(driver, 10).until(EC.element_to_be_clickable(connect_now_button)).click()
-        #     print("Clicked the Connect now button")
-        # else: print("not found connect")
+        with open(CSV_NAME, mode='r', newline='') as file:
+            # Create a CSV reader object
+            csv_reader = csv.reader(file)
 
-        connect_now_button = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(@aria-label, 'to connect') or contains(@class, 'pvs-profile-actions__action')]")))
+            # Skip the header row
+            next(csv_reader)
 
-        if connect_now_button:
-            connect_now_button.click()
-            print("Clicked the Connect now button")
-        else:
-            print("Connect button not found")
+            # Iterate over the rows in the CSV
+            for row in csv_reader:
+                # Using the links  in the first column
+                Send_Request(driver, row[0])
+
+    except:
+        pass
+
+def Send_Request(driver, link):
+    """Searches for clipboard content and clicks the first result link.
+    Returns connection_request status and name of linkedin user"""
+
+    driver.get(link)
+    driver.maximize_window()
+    time.sleep(2)
+
+    try:
+        more_button = driver.find_element(By.XPATH, "//button[contains(@aria-label, 'More actions')]")
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable(more_button)).click()
+        print("Clicked the More button")
+
+        connect_now_button = driver.find_element(By.XPATH, "//button[contains(@aria-label, 'to connect')]")
+
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable(connect_now_button)).click()
+        print("Clicked the Connect now button")
 
         time.sleep(2)
-
-        # waiting 2 seconds and then clicking send with a note button 
-        send_without_note_button = driver.find_element(By.XPATH, "//button[contains(@aria-label, 'Send without a note')]")
-        WebDriverWait(driver, 15).until(EC.element_to_be_clickable(send_without_note_button)).click()
+        # waiting 2 seconds and then clicking send with a note button
+        send_without_note_button = driver.find_element(By.XPATH,
+                                                       "//button[contains(@aria-label, 'Send without a note')]")
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable(send_without_note_button)).click()
         print("Clicked Send without note button")
 
 
-    except Exception as e:
-        print(f"Failed to connect: {e}")
-        import traceback
-        traceback.print_exc()
+    except:
+        # When More button is not present
+        try:
 
+            # Wait for the Connect button to be present
+            connect_now_button = driver.find_element(By.XPATH, "//button[contains(@aria-label, 'to connect')]")
+
+            WebDriverWait(driver, 10).until(EC.element_to_be_clickable(connect_now_button)).click()
+            print("Clicked the Connect now button")
+
+            time.sleep(2)
+            # waiting 2 seconds and then clicking send with a note button
+            send_without_note_button = driver.find_element(By.XPATH,
+                                                           "//button[contains(@aria-label, 'Send without a note')]")
+            WebDriverWait(driver, 10).until(EC.element_to_be_clickable(send_without_note_button)).click()
+            print("Clicked Send without note button")
+
+
+
+        except:
+            print(f"Failed to connect")
+
+    finally:
+        # Ensure the driver is quit if it's still running
+        try:
+            driver.quit()
+        except:
+            pass
 
 
 def wait_for_browser_close(driver):
@@ -103,13 +126,14 @@ def wait_for_browser_close(driver):
             print("Browser closed, ending program.")
             break
 
+
 def main():
     service = Service(executable_path="chromedriver.exe")
     driver = webdriver.Chrome(service=service)
 
     try:
         login_to_linkedin(driver, LINKEDIN_USERNAME, LINKEDIN_PASSWORD)
-        search_and_click_first_result(driver)
+        Iterate_CSV(driver)
         wait_for_browser_close(driver)
     finally:
         # Ensure the driver is quit if it's still running
@@ -117,6 +141,7 @@ def main():
             driver.quit()
         except:
             pass
+
 
 if __name__ == "__main__":
     main()
