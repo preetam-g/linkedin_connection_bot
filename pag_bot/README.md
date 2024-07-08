@@ -1,11 +1,5 @@
-## 0: Introduction
-For everyone who wants to expand their network on LinkedIn but is too busy to send requests to hundreds of people manually. This bot can send connection requests to as many people as you want without requiring any external assistance, but you must occasionally monitor it. You can go through Section 2 to use this on your own device.
-
 ## 1: Working
 This is a complete Python program that uses the PyAutoGUI module of Python. This module is used to control your mouse and keyboard commands. One of the applications of PyAutoGUI is to automate actions of the mouse and keyboard based on the content present on the screen, which is being done here. If you want to know more about PyAutoGUI, you can visit this [site](https://pyautogui.readthedocs.io/en/latest/).
-
-## 2: Configuration of code
-You can see the folder labeled "alpha_testing" to visualize and understand the workings of the code in my personal system. This would help you configure the code easily. Before configuring the code, make sure the prerequisites are met.
 
 ### 2.0: Pre-requisites
 * This code is designed to work on Windows computer systems.
@@ -18,7 +12,6 @@ This program requires python, pyautogui and open-cv.
 * You also should have pip installed to install the neccessary pacakages of python. To check if pip is installed in your system use the command "pip --version", this should display a message showing the current version of pip.
 * Run the commands "pip install pyautogui" to install **PyAutoGUI** module.
 * Now run "pip install opencv-python" to install **OpenCV**. This should install the opencv that is compatible with your python version.
-
 
 ### 2.2: Clone
 Once you are done with pre-requisites, clone this github repository into any desired directory of your choice in your system. Make sure that all the files of "bot_code" are in the same directory, else this code will not work. You can delete the "alpha_testing".
