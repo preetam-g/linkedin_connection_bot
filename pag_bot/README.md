@@ -42,22 +42,21 @@ You can also add your personalized connection note. The default note set is
 This has been kept optional due to multiple restrictions of LinkedIn on free accounts.
 To add your note, open the "images.py" file and write the note within triple dobule-quotes ("""Like this"""). This ensures that we can add notes consisting of multiple lines in the python file.
 
-## 3: How to use
 
-### 3.1: From cmd prompt:
-* Open any one of windows powershell, terminal or command prompt. 
-* Navigate to the location of "bot_code" directory in your system.
-* Now once you are in the "bot_code" directory, type in the command "python main.py" to start executing the program.
+## 3: Usage
 
-### 3.2: From VSCode terminal
-* Click Ctrl+Shift+` to open new terminal.
-* Follow steps 2 and 3 from the above instructions.
-
-### 3.3: Inputs
+### 3.1: Inputs
 * You will be asked for cell number, give the cell number of cell from which you want to start sending requests from the excel sheet.
 * Give the number of cells this code should run for.
 * You can also choose whether to send the connection note or not. If you choose "y" make sure to edit the default connection note before starting the program.
 
-## Remember
+### 3.2: Run the programme
+Move into the linkednin_connection_bot directory using a terminal of your choice. Copy the following commands.
+```bash
+cd pag_bot
+python main.py
+```
+
+## 4: Remember
 * Try not to make any changes in the "main.py" if you don't completely understand how to code works. If you are well aware of python you can tweek the code according to your needs by refering to the pyautogui documentation. 
 * If you want to stop the program force your mouse cursor to the top left corner of the screen, this will trigger the fail-safe mechanism and the program will stop executing. You can continue again from the stopped cell by giving this cell num and input when you run the program again.
