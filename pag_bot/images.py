@@ -1,17 +1,18 @@
 
 # update the given link with your sheet's link
-excel_sheet_link = "https://docs.google.com/spreadsheets/d/1M4OiiMCHYxgT4OKQ0wCle2SRtA-W52Wk-zr__1SAsU0/"
+excel_sheet_link = "your excel sheet link"
 
+# use your own note complying to the limits of linkedIn
 connection_note = """Hi, 
 I would like to connect with you."""
-
-open_cmd = f"start chrome --profile-directory=Default {excel_sheet_link}"
 
 # to open default chrome profile from cmd use the below line
 # start chrome --profile-directory=Default 
 
 # to open a particular website, add the link of the site separated with spaces.
 # to open in guest mode, write "guest" instead of "Default".
+
+open_cmd = f"start chrome --profile-directory=Default {excel_sheet_link}"
 
 
 # do not change the below lines

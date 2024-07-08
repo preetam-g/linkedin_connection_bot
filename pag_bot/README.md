@@ -50,7 +50,7 @@ To add your note, open the "images.py" file and write the note within triple dob
 * Give the number of cells this code should run for.
 * You can also choose whether to send the connection note or not. If you choose "y" make sure to edit the default connection note before starting the program.
 
-### 3.2: Run the programme
+### 3.2: Run the program
 Move into the linkednin_connection_bot directory using a terminal of your choice. Copy the following commands.
 ```bash
 cd pag_bot
