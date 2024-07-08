@@ -14,28 +14,6 @@ while (note_present not in ['y', 'n']):
 if (note_present == 'y'): note_present = True
 else: note_present = False
 
-# opening chrome profiles in my system
-# pag.hotkey("win", 'r',interval=0.25)
-# pag.countdown(1)
-# pag.hotkey("ctrl", 'a', "backspace")
-# pag.countdown(1)
-# pag.typewrite("chrome",interval=0.05)
-# pag.countdown(1)
-# pag.hotkey("enter")
-# pag.countdown(3)
-
-# profile_button = pag.locateCenterOnScreen(images.profile_img, confidence = 0.8) 
-# pag.click(profile_button, duration=1.28, tween = pag.easeOutQuad)
-# pag.countdown(3)
-
-# opening listing excel sheet
-# pag.hotkey("ctrl", 't')
-# pag.countdown(3)
-# pag.typewrite(images.excel_sheet_link, interval=0.06)
-# pag.countdown(1)
-# pag.press("enter")
-# pag.countdown(4)
-
 # generalized opening of chrome through cmd prompt
 pag.hotkey("win", 'r', interval=0.25)
 pag.countdown(1)

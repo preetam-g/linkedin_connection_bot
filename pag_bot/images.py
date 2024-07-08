@@ -27,5 +27,3 @@ more_connect = "more_connect.jpg"
 send = "send.jpg"
 
 without_note = "no_note.jpg"
-
-profile_img = "gp_prof.png"
