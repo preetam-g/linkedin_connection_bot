@@ -16,7 +16,7 @@ This program requires python, pyautogui and open-cv.
 ```bash
 git clone https://github.com/NemesisXVI/linkedin-auto-connect-bot.git
 cd linkedin-auto-connect-bot
-
+```
 
 ### 2.3: Google sheet
 * Create a Google sheet and add all the links to LinkedIn profiles in one column. Make sure that there are no empty cells between two links in that column. Here is an example image.
