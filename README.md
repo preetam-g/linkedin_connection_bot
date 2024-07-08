@@ -20,4 +20,4 @@ These two work in a similar manner, each of them requires a list of links to pro
 #### Don't forget
 This code only sends requests but does not keep track of your connections so make sure you actively check your linkedIn connections. If any of these professionals accept your connection request, using the contact info option obtain their phone_no. and email ids and update them in your database correspondingly along with their position. Once you feel like you have a robust database, group the database according to company name and start your cold callings.
 
-HAND! (Have a nice Day :beaming face with similing eyes:)
+HAND! (Have a nice Day :grin:)
