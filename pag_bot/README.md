@@ -1,22 +1,22 @@
 ## Working
 This is a complete Python program that uses the PyAutoGUI module of Python. This module is used to control your mouse and keyboard commands. One of the applications of PyAutoGUI is to automate actions of the mouse and keyboard based on the content present on the screen, which is being done here. If you want to know more about PyAutoGUI, you can visit this [site](https://pyautogui.readthedocs.io/en/latest/).
 
-### Pre-requisites
+## Pre-requisites
 * This code is designed to work on Windows computer systems.
 * You should be logged in to your LinkedIn web in **_chrome_** browser. (It will not work if you have any browsers other than Chrome.)
 * You should have a dark theme set on the LinkedIn webpage. On how to switch, visit this [site](https://www.linkedin.com/help/linkedin/answer/a524473/switch-between-dark-and-light-mode#:~:text=To%20switch%20to%20either%20dark,under%20Display%2C%20click%20Dark%20mode.).
 
-### Installs
+## Installs
 
 This program requires python, pyautogui and open-cv. 
 * Download the latest python version from [here](https://www.python.org/downloads/).
 * You also should have pip installed to install the neccessary pacakages of python. To check if pip is installed in your system use the command "pip --version", this should display a message showing the current version of pip.
 
-Install required packages
+### Clone 
+```bash
+git clone https://github.com/NemesisXVI/linkedin-auto-connect-bot.git
+cd linkedin-auto-connect-bot
 
-
-### 2.2: Clone
-Once you are done with pre-requisites, clone this github repository into any desired directory of your choice in your system. Make sure that all the files of "bot_code" are in the same directory, else this code will not work. You can delete the "alpha_testing".
 
 ### 2.3: Google sheet
 * Create a Google sheet and add all the links to LinkedIn profiles in one column. Make sure that there are no empty cells between two links in that column. Here is an example image.
