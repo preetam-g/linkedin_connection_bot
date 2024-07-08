@@ -14,6 +14,7 @@ open_cmd = f"start chrome --profile-directory=Default {excel_sheet_link}"
 # to open in guest mode, write "guest" instead of "Default".
 
 
+# do not change the below lines
 connect = "connect.jpg"
 
 connect2 = "connect2.jpg"
