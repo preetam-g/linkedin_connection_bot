@@ -5,12 +5,18 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
+from configparser import ConfigParser
 import csv
 import time
 
-LINKEDIN_USERNAME = "your username"
-LINKEDIN_PASSWORD = "your password"
-CSV_NAME = "Enter CSV name (with .csv)"
+file = "config.ini"
+config = ConfigParser()
+config.read(file)
+
+LINKEDIN_USERNAME = config['linkedin']['LINKEDIN_USERNAME']
+LINKEDIN_PASSWORD = config['linkedin']['LINKEDIN_PASSWORD']
+
+CSV_NAME = "profiles.csv"
 
 def login_to_linkedin(driver, username, password):
     """Logs into LinkedIn with the provided credentials."""
@@ -68,6 +74,7 @@ def Send_Request(driver, link):
     time.sleep(2)
 
     try:
+        
         more_button = driver.find_element(By.XPATH, "//button[contains(@aria-label, 'More actions')]")
         WebDriverWait(driver, 10).until(EC.element_to_be_clickable(more_button)).click()
         print("Clicked the More button")

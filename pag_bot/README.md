@@ -15,9 +15,10 @@ This program requires python, pyautogui and open-cv.
 ### 2.1: Cloning the repository
 Move into the directory where you would like to clone this repository and using terminal in your code editor and paste the following lines.
 ```bash
-git clone https://github.com/NemesisXVI/linkedin-auto-connect-bot.git
-cd linkedin-auto-connect-bot
+git clone https://github.com/preetam-g/linkedin_connection_bot.git
+cd linkedin_connection_bot
 ```
+
 ### 2.2: Installing required packages
 Install the required python packages. In case of other requirements, install them accordingly.
 ```bash
